@@ -19,7 +19,7 @@ def soup_search(query_url: str, search_term: str):
 
 def first_result_print(search_page):
     print("{}\n".format(search_page.find("div", class_="searchList__pageCount--2jQdB").get_text()))
-    print(search_page.find("a", class_="word--C9UPa word_thumbnail--2DBNk").get_text().replace('\n', '\n\n'))
+    print(search_page.find("section", class_="word__defination--2q7ZH undefined").get_text().replace('\n', '\n\n'))
 
 
 def main():
